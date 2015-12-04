@@ -30,11 +30,9 @@ char		*ft_itoa(int n)
 	int		len;
 	int		buf;
 	char	*ret;
-	size_t	i;
 
 	if ((ret = ft_isnegmaxint(n)))
 		return (ret);
-	i = 0;
 	len = (n < 0) ? 1 : 0;
 	buf = n;
 	while (n /= 10)
