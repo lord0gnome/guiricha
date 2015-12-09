@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 12:35:25 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/03 13:03:31 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/04 17:07:36 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	*ft_memalloc(size_t size)
 {
 	void	*new;
 
-	if (size == 0)
-		return (NULL);
 	new = (void *)malloc(sizeof(char) * size);
-	if (new)
-		ft_bzero(new, size);
+	if (!new)
+		return (NULL);
+	ft_bzero(new, size);
 	return (new);
 }

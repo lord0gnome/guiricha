@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:53:54 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/03 12:02:09 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/09 16:21:00 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	find = NULL;
 	while (*s)
 	{
-		if ((unsigned char)*s == (unsigned char)c)
+		if ((char)*s == (char)c)
 			find = (char *)s;
 		s++;
 	}
-	if (*s == (unsigned char)c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (find);
 }

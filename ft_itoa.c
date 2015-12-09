@@ -6,22 +6,24 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 13:25:57 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/03 15:25:37 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/03 17:26:53 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_isnegmaxint(int n)
+static char	*ft_test(int n, int len)
 {
 	char	*ret;
 
-	ret = NULL;
+	ret = 0;
 	if (n == -2147483648)
 	{
 		ret = ft_strnew(11);
 		ret = "-2147483648";
 	}
+	else
+		ret = ft_strnew(len + 1);
 	return (ret);
 }
 
@@ -30,16 +32,16 @@ char		*ft_itoa(int n)
 	int		len;
 	int		buf;
 	char	*ret;
+	size_t	i;
 
-	if ((ret = ft_isnegmaxint(n)))
-		return (ret);
+	i = 0;
 	len = (n < 0) ? 1 : 0;
 	buf = n;
 	while (n /= 10)
 		len++;
 	while (n <= -10)
 		len++;
-	ret = ft_strnew(len + 1);
+	ret = ft_test(n, len);
 	if (!ret)
 		return (NULL);
 	while (buf >= 10 || buf <= -10)

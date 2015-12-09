@@ -1,2 +1,0 @@
-# guiricha
-My LIBFT

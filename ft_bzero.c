@@ -6,20 +6,20 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:33:00 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/03 12:57:26 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/09 14:14:19 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_bzero(void *s, size_t n)
+void		ft_bzero(void *s, size_t n)
 {
 	char	*str;
 	size_t	i;
 
 	if (n == 0)
 		return ;
-	str = s;
+	str = (char *)s;
 	i = 0;
 	while (i < n)
 	{

@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 15:19:02 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/09 16:29:27 by guiricha         ###   ########.fr       */
+/*   Created: 2015/12/05 12:08:17 by guiricha          #+#    #+#             */
+/*   Updated: 2015/12/05 12:18:25 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strstr(const char *big, const char *little)
+t_list	*ft_lstmap(t_list *lst, t_list *(f)(t_list *elem))
 {
-	int		i;
-	int		i2;
-	int		place;
+	t_list	*new;
+	t_list	*next;
+	t_list	*last;
 
-	i = 0;
-	i2 = 0;
-	if (!little[i])
-		return ((char *)big);
-	while (big[i])
+	new = NULL;
+	new = f(lst);
+	last = new;
+	lst = lst->next;
+	while (lst)
 	{
-		place = i;
-		while (big[i] == little[i2])
-		{
-			i++;
-			i2++;
-			if (little[i2] == '\0')
-				return ((char *)big + (i - i2));
-		}
-		i2 = 0;
-		i = place;
-		i++;
+		next = f(lst);
+		last->next = next;
+		last = next;
+		lst = lst->next;
 	}
-	return (NULL);
+	last->next = NULL;
+	return (new);
 }

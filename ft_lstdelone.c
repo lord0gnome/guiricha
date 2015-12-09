@@ -1,40 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 15:19:02 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/09 16:29:27 by guiricha         ###   ########.fr       */
+/*   Created: 2015/12/04 14:12:12 by guiricha          #+#    #+#             */
+/*   Updated: 2015/12/04 15:07:53 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strstr(const char *big, const char *little)
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	int		i;
-	int		i2;
-	int		place;
-
-	i = 0;
-	i2 = 0;
-	if (!little[i])
-		return ((char *)big);
-	while (big[i])
-	{
-		place = i;
-		while (big[i] == little[i2])
-		{
-			i++;
-			i2++;
-			if (little[i2] == '\0')
-				return ((char *)big + (i - i2));
-		}
-		i2 = 0;
-		i = place;
-		i++;
-	}
-	return (NULL);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }

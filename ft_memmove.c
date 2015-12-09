@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:04:13 by guiricha          #+#    #+#             */
-/*   Updated: 2015/11/25 18:32:09 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/09 14:19:02 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*a;
 	char	*b;
 
-	a = dst;
+	a = (char *)dst;
 	b = (char *)src;
 	if (src <= dst)
 	{
