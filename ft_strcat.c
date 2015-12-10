@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:21:49 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/10 17:37:23 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 18:20:51 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strcat(char *s1, const char *s2)
 	a = s1;
 	b = (char *)s2;
 	if (!*b)
-		return(s1);
+		return (s1);
 	while (*a)
 		a++;
 	while (b)

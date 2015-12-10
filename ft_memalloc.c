@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 12:35:25 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/10 17:08:29 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 18:20:27 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_memalloc(size_t size)
 	new = malloc(size);
 	if (!new)
 		return (NULL);
-	else	
-		return (ft_memset(new, 0 , size));
+	else
+		return (ft_memset(new, 0, size));
 }

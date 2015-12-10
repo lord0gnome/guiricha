@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:11:58 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/10 17:12:29 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 18:20:40 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		*a = *b;
 		a++;
-		return(void *)a;
+		return (void *)a;
 	}
 	return (NULL);
 }
