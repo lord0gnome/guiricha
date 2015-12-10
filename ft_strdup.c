@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 13:16:22 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/10 18:21:03 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 18:28:30 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char		*ft_strdup(const char *s1)
 	char	*new;
 	size_t	i;
 
-	if (!s1)
-		return (NULL);
 	length = ft_strlen(s1);
 	if (!(new = ft_strnew(length)))
 		return (NULL);
