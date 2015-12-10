@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:33:00 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/09 14:14:19 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 17:03:26 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,5 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	char	*str;
-	size_t	i;
-
-	if (n == 0)
-		return ;
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	ft_memset(s, 0 , n);
 }

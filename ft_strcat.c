@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:21:49 by guiricha          #+#    #+#             */
-/*   Updated: 2015/11/26 14:00:20 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/10 17:37:23 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int v;
+	char	*a;
+	char	*b;
 
-	v = 0;
-	i = ft_strlen(s1);
-	while (s2[v])
-		s1[i++] = s2[v++];
-	s1[i] = '\0';
+	a = s1;
+	b = (char *)s2;
+	if (!*b)
+		return(s1);
+	while (*a)
+		a++;
+	while (b)
+		*a++ = *b++;
+	*a = '\0';
 	return (s1);
 }
