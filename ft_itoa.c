@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 13:25:57 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/03 17:26:53 by guiricha         ###   ########.fr       */
+/*   Updated: 2015/12/12 16:35:52 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ char		*ft_itoa(int n)
 	int		len;
 	int		buf;
 	char	*ret;
-	size_t	i;
 
-	i = 0;
 	len = (n < 0) ? 1 : 0;
 	buf = n;
 	while (n /= 10)
