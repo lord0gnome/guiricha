@@ -6,7 +6,7 @@
 #    By: guiricha <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 16:55:06 by guiricha          #+#    #+#              #
-#    Updated: 2016/01/25 16:10:56 by guiricha         ###   ########.fr        #
+#    Updated: 2016/04/12 16:38:00 by guiricha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,15 +34,15 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 all: $(NAME)
 	
 $(NAME): $(OBJ_NAME)
-	ar cr $(NAME) $(OBJ_NAME)
-	ranlib $(NAME)
+	@ar cr $(NAME) $(OBJ_NAME)
+	@ranlib $(NAME)
 $(OBJ_NAME):
-	$(CC) $(CFLAGS) -c $(SRC_NAME)
+	@$(CC) $(CFLAGS) -c $(SRC_NAME)
 clean:
-	rm -f *.o
+	@rm -f *.o
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
