@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/04/14 13:47:00 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/04/16 15:41:24 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,7 @@ void				ft_strexpand(char *str);
 size_t				ft_lstlen(t_list **first);
 t_list				*ft_sort_list(t_list *lst, int(*cmp)(int, int));
 int					*ft_range(int start, int end);
+void				ft_wait(long time);
+int					ft_abs(int n);
 
 #endif
