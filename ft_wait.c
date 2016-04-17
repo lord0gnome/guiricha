@@ -6,14 +6,15 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/16 12:49:56 by guiricha          #+#    #+#             */
-/*   Updated: 2016/04/16 12:52:38 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/04/17 14:53:53 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_wait(long time)
+void	ft_wait(double time)
 {
+	time = time * 10000000;
 	while (time-- > 0)
 		continue ;
 }
