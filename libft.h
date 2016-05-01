@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/04/26 14:53:47 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/05/01 16:45:10 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ int					*ft_range(int start, int end);
 void				ft_wait(double time);
 int					ft_abs(int n);
 void				ft_sort_tab(int *tab, unsigned int size);
+int					ft_nbrlen(int nbr);
 
 
 #endif
