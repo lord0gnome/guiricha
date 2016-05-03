@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/16 12:49:56 by guiricha          #+#    #+#             */
-/*   Updated: 2016/04/17 14:53:53 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/05/03 17:46:58 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_wait(double time)
 {
-	time = time * 10000000;
+	time = time * 1000000;
 	while (time-- > 0)
 		continue ;
 }
