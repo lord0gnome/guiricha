@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/07/04 16:28:48 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/07/11 16:10:03 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_i_list
 }					t_i_list;
 
 int					ft_atoi(const char *str);
+int					ft_atoi_addlen(int *var, const char *str);
 long long			ft_atoll(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
