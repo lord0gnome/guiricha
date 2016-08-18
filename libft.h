@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/07/11 16:10:03 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/18 17:15:58 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char				*ft_strnew(size_t size);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
 void				ft_putstr(char const *s);
+void				ft_strntilnl(char *str);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
@@ -66,8 +67,10 @@ char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmpdelim(const char *s1, const char *s2, char delim);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_findfirstlastdelim(char *str, char delim, int last);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoin_lemin(char const *s1, char const *s2);
