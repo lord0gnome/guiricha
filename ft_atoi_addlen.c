@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 15:59:41 by guiricha          #+#    #+#             */
-/*   Updated: 2016/07/11 16:09:21 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/20 16:34:15 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_istruespace(int c)
 		return (0);
 }
 
-int		ft_atoi_addlen(int *var, const char *str)
+int			ft_atoi_addlen(int *var, const char *str)
 {
 	long	result;
 	int		sign;

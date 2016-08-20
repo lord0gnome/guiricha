@@ -6,13 +6,20 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/08/18 17:15:58 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/20 15:34:31 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+
+typedef struct		s_s_list
+{
+	char			*str;
+	char			flag;
+	struct s_s_list	*next;
+}					t_s_list;
 
 typedef struct		s_list
 {
@@ -27,6 +34,8 @@ typedef struct		s_i_list
 	struct s_i_list	*next;
 }					t_i_list;
 
+t_s_list			*ft_create_s_list(char *str, char flag);
+t_s_list			*ft_add_s_list(char *str, char flag, t_s_list *begin);
 int					ft_atoi(const char *str);
 int					ft_atoi_addlen(int *var, const char *str);
 long long			ft_atoll(const char *str);
