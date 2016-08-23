@@ -6,12 +6,28 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/20 13:01:49 by guiricha          #+#    #+#             */
-/*   Updated: 2016/08/20 15:34:54 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/23 17:32:16 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+void	ft_swap_next_members(t_s_list **m1, t_s_list **m2)
+{
+	t_s_list	tmp;
+
+
+	tmp = (**m1).next;
+	(*m1)->next = 
+
+	ft_putchar('\n');
+	ft_putendl((*m1)->str);
+	ft_putendl((*m1)->next->str);
+	ft_putendl((*m2)->str);
+	ft_putendl((*m2)->next->str);
+	ft_putchar('\n');
+}
 
 t_s_list	*ft_create_s_list(char *str, char flag)
 {
