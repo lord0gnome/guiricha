@@ -6,27 +6,38 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/20 13:01:49 by guiricha          #+#    #+#             */
-/*   Updated: 2016/08/23 17:32:16 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/24 18:33:51 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "../printf/ft_printf.h"
 #include <stdlib.h>
 
-void	ft_swap_next_members(t_s_list **m1, t_s_list **m2)
+void	ft_print_members(t_s_list *list)
 {
-	t_s_list	tmp;
+	while (list)
+	{
+		ft_putnbr(list->flag);
+		ft_putchar('-');
+		ft_putendl(list->str);
+		list = list->next;
+	}
+}
 
+void	ft_swap_members(t_s_list **m1, t_s_list **m2)
+{
+	t_s_list	*bck;
+	bck = (t_s_list *)malloc(sizeof(t_s_list));
 
-	tmp = (**m1).next;
-	(*m1)->next = 
-
-	ft_putchar('\n');
-	ft_putendl((*m1)->str);
-	ft_putendl((*m1)->next->str);
-	ft_putendl((*m2)->str);
-	ft_putendl((*m2)->next->str);
-	ft_putchar('\n');
+	bck->str = ft_strdup((*m1)->str);
+	bck->flag = (*m1)->flag;
+	free((*m1)->str);
+	(*m1)->str = ft_strdup((*m2)->str);
+	free((*m2)->str);
+	(*m2)->str = ft_strdup(bck->str);
+	(*m1)->flag = (*m2)->flag;
+	(*m2)->flag = bck->flag;
 }
 
 t_s_list	*ft_create_s_list(char *str, char flag)
@@ -38,6 +49,7 @@ t_s_list	*ft_create_s_list(char *str, char flag)
 	new->str = ft_strdup(str);
 	new->flag = flag;
 	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }
 
@@ -49,13 +61,14 @@ t_s_list	*ft_add_s_list(char *str, char flag, t_s_list *begin)
 	if (!begin)
 		return (new = ft_create_s_list(str, flag));
 	travel = begin;
-	while (travel && travel->next)
-		travel = travel->next;
 	if (!(new = (t_s_list *)malloc(sizeof(t_s_list))))
 		return (NULL);
+	while (travel && travel->next)
+		travel = travel->next;
 	travel->next = new;
 	new->str = ft_strdup(str);
 	new->flag = flag;
 	new->next = NULL;
+	new->prev = travel;
 	return (begin);
 }

@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/08/23 17:32:29 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/24 18:33:51 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef struct		s_s_list
 	char			*str;
 	char			flag;
 	struct s_s_list	*next;
+	struct s_s_list	*prev;
 }					t_s_list;
 
 typedef struct		s_list
@@ -33,7 +34,9 @@ typedef struct		s_i_list
 	int				content;
 	struct s_i_list	*next;
 }					t_i_list;
-void				ft_swap_next_members(t_s_list **m1, t_s_list **m2);
+
+void				ft_print_members(t_s_list *list);
+void				ft_swap_members(t_s_list **m1, t_s_list **m2);
 t_s_list			*ft_create_s_list(char *str, char flag);
 t_s_list			*ft_add_s_list(char *str, char flag, t_s_list *begin);
 int					ft_atoi(const char *str);
