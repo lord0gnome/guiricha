@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/20 13:01:49 by guiricha          #+#    #+#             */
-/*   Updated: 2016/08/24 18:33:51 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/08/25 17:54:42 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	ft_swap_members(t_s_list **m1, t_s_list **m2)
 	t_s_list	*bck;
 	bck = (t_s_list *)malloc(sizeof(t_s_list));
 
+	if (!(*m1) || !(*m2))
+		return ;
 	bck->str = ft_strdup((*m1)->str);
 	bck->flag = (*m1)->flag;
 	free((*m1)->str);
