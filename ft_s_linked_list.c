@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/20 13:01:49 by guiricha          #+#    #+#             */
-/*   Updated: 2016/09/19 13:24:08 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/09/19 13:52:31 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void		ft_print_members(t_s_list *list)
 {
 	while (list)
 	{
-		ft_putnbr(list->flag);
-		ft_putchar('_');
 		ft_putendl(list->str);
 		list = list->next;
 	}
