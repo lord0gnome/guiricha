@@ -6,28 +6,29 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/20 13:01:49 by guiricha          #+#    #+#             */
-/*   Updated: 2016/09/17 19:52:46 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/09/19 13:24:08 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "../printf/ft_printf.h"
 #include <stdlib.h>
 
-void	ft_print_members(t_s_list *list)
+void		ft_print_members(t_s_list *list)
 {
 	while (list)
 	{
+		ft_putnbr(list->flag);
+		ft_putchar('_');
 		ft_putendl(list->str);
 		list = list->next;
 	}
 }
 
-void	ft_swap_members(t_s_list **m1, t_s_list **m2)
+void		ft_swap_members(t_s_list **m1, t_s_list **m2)
 {
 	t_s_list	*bck;
-	bck = (t_s_list *)malloc(sizeof(t_s_list));
 
+	bck = (t_s_list *)malloc(sizeof(t_s_list));
 	if (!(*m1) || !(*m2))
 		return ;
 	bck->str = ft_strdup((*m1)->str);
