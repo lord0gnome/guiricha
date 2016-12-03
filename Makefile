@@ -6,7 +6,7 @@
 #    By: guiricha <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 16:55:06 by guiricha          #+#    #+#              #
-#    Updated: 2016/11/30 14:23:36 by guiricha         ###   ########.fr        #
+#    Updated: 2016/12/03 13:31:44 by guiricha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC_NAME = ft_isalpha.c ft_memccpy.c ft_putchar.c ft_strcpy.c ft_strncat.c \
 		   ft_tab_mult.c ft_list_foreach.c ft_atoll.c ft_wait.c ft_abs.c \
 		   ft_sort_tab.c ft_nbrlen.c ft_strdup_lemin.c ft_strjoin_lemin.c \
 		   ft_strndup.c ft_strgrab.c ft_atoi_addlen.c ft_findfirstlastdelim.c \
-		   ft_strntilnl.c ft_strcmpdelim.c ft_strtonbr.c
+		   ft_strntilnl.c ft_strcmpdelim.c ft_strtonbr.c ft_debug.c
 NAME = libft.a
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall

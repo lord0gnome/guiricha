@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2016/11/30 14:51:07 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/12/03 13:32:00 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
+void				ft_debug(int line);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, void const *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
