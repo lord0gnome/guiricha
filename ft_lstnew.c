@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 18:10:58 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/04 14:18:24 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/01/14 12:11:36 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		new->content_size = content_size;
 	}
 	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }

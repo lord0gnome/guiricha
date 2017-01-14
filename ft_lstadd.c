@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 15:25:07 by guiricha          #+#    #+#             */
-/*   Updated: 2015/12/04 15:28:54 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/01/14 12:12:37 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	(new)->next = (*alst);
+	(*alst)->prev = new;
 	*alst = new;
 }
