@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2017/01/14 12:11:21 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/01/23 15:00:30 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,17 @@ typedef struct		s_i_list
 	struct s_i_list	*next;
 }					t_i_list;
 
+typedef struct		s_stat_data
+{
+	struct stat		*ptr;
+	struct passwd	*pwd;
+	struct group	*grp;
+	struct tm		*tm;
+	char			*dstr;
+
+}					t_stat_data;
+
+t_stat_data			*ft_stat(char *filename);
 int					ft_atoi(const char *str);
 int					ft_atoi_addlen(int *var, const char *str);
 long long			ft_atoll(const char *str);
@@ -70,13 +81,16 @@ char				*ft_strnstr(const char *big, const char *little, size_t n);
 int					ft_strtonbr(char *str, long long *nbr, int base);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strrevncmp(char *s1, char *s2, size_t n);
 int					ft_strcmpdelim(const char *s1, const char *s2, char delim);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_findfirstlastdelim(char *str, char delim, int last);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrijoin(char *s1, char *s2, char *s3);
 char				*ft_strjoin_lemin(char const *s1, char const *s2);
+char				*ft_substr(char *str, size_t start, size_t end);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
