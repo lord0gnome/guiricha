@@ -4,9 +4,6 @@
 *.obj
 *.elf
 
-#printf folder
-printf
-
 # Precompiled Headers
 *.gch
 *.pch
