@@ -6,14 +6,14 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 14:22:02 by guiricha          #+#    #+#             */
-/*   Updated: 2017/10/19 15:25:37 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/10/19 16:40:16 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	order_indexes_correctly(char **array, int *array_indexes, char asc)
+static void	order_indexes_correctly(char **array, int *array_indexes, char asc)
 {
 	int index;
 	int	result_of_cmp;
@@ -39,7 +39,7 @@ void	order_indexes_correctly(char **array, int *array_indexes, char asc)
 	}
 }
 
-char	**ft_sort_str_array(char **array, int array_len, char ascending)
+char		**ft_sort_str_array(char **array, int array_len, char ascending)
 {
 	int		*array_indexes;
 	int		index;

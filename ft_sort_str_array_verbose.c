@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 14:22:02 by guiricha          #+#    #+#             */
-/*   Updated: 2017/10/19 15:23:06 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/10/19 15:36:02 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	order_indexes_correctly(char **array, int *array_indexes, char asc) {
+static void	order_indexes_correctly(char **array, int *array_indexes, char asc) {
 	int index;
 	int	result_of_cmp;
 	int	tmpind;
@@ -40,7 +40,7 @@ void	order_indexes_correctly(char **array, int *array_indexes, char asc) {
 }
 
 
-char	**ft_sort_str_array(char **array, int array_len, char ascending) {
+char	**ft_sort_str_array_verbose(char **array, int array_len, char ascending) {
 	int		*array_indexes;
 	int		index;
 	char	**ret_array;
@@ -69,9 +69,4 @@ char	**ft_sort_str_array(char **array, int array_len, char ascending) {
 	}
 	free(array_indexes);
 	return (ret_array);
-}
-
-
-int	main(int argc, char **argv) {
-	ft_sort_str_array(argv, argc, 0);
 }
