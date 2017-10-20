@@ -6,13 +6,14 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2017/10/19 16:40:51 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/10/20 20:25:44 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <sys/stat.h>
 
 typedef struct		s_list
 {
@@ -125,7 +126,7 @@ int					*ft_range(int start, int end);
 void				ft_wait(double time);
 int					ft_abs(int n);
 void				ft_sort_tab(int *tab, unsigned int size);
-char				**ft_sort_str_array(char **array, int size, char ascending);
+char				**ft_sort_str_array(char **array, int size, int (*f)(const char *s1, const char *s2), char ascending);
 char				**ft_sort_str_array_verbose(char **array, int size,
 																char ascending);
 int					ft_nbrlen(int nbr);

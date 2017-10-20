@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/19 12:48:40 by guiricha          #+#    #+#             */
-/*   Updated: 2017/01/23 15:00:04 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/10/20 20:46:28 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <locale.h>
 #include <pwd.h>
 #include <grp.h>
+#include <stdio.h> // tmosgdfngun
 
 t_stat_data	*ft_stat(char *filename)
 {
@@ -28,8 +29,10 @@ t_stat_data	*ft_stat(char *filename)
 	d = (t_stat_data *)malloc(sizeof(t_stat_data));
 	if (!d)
 		return (NULL);
-	if (stat(filename, &retstat) != -1)
+	printf("trying to lstat\n");
+	if (lstat(filename, &retstat) != -1)
 	{
+		printf("lstat didn't error\n");
 		d->pwd = getpwuid(retstat.st_uid);
 		d->dstr = ctime(&(retstat.st_mtime));
 	}
