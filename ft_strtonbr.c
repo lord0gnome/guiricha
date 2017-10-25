@@ -14,12 +14,9 @@
 
 int	ft_strtonbr(char *str, long long *nbr, int base)
 {
-	char		sign;
-
 	if ((base < 2 || base > 16))
 		return (-1);
 	*nbr = 0;
-	sign = *str == '-' ? -1 : 1;
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str && ft_isdigit(*str))
