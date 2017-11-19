@@ -6,7 +6,7 @@
 /*   By: guiricha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:39:30 by guiricha          #+#    #+#             */
-/*   Updated: 2017/10/20 20:25:44 by guiricha         ###   ########.fr       */
+/*   Updated: 2017/11/19 12:18:47 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 int					ft_strtonbr(char *str, long long *nbr, int base);
 int					ft_strcmp(const char *s1, const char *s2);
+int					ft_check_end_of_string(char *string, char *pattern);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strrevncmp(char *s1, char *s2, size_t n);
 int					ft_strcmpdelim(const char *s1, const char *s2, char delim);
@@ -101,6 +102,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
+char				*add_dir_to_str(const char *s1, const char *s2);
 char				*ft_itoa(int n);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);
